@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+  <addon id="repository.vladoem"
+  version="1.0.8"
+  name="VladoEm's repository"
+  provider-name="vladoem">
+  <extension point="xbmc.addon.repository"
+  name="VladoEm repo">
+  <dir>
+    <info compressed="false">https://vladoem.github.io/addons/addons.xml</info>
+    <checksum>https://vladoem.github.io/addons/addons.sha256</checksum>
+    <datadir zip="fasle">https://vladoem.github.io/addons/</datadir>
+    <hashes>sha256</hashes>
+  </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary>Vladov repozitár doplnkov</summary>
+      <description>Vladov repozitár doplnkov</description>
+      <platform>all</platform>
+      <language>en cs sk</language>
+    </extension>
+    </addon>
+
+
   <addon id="plugin.video.aktualne.cz" name="Aktuálně.cz" version="2.3.5" provider-name="wombat">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -39,7 +61,7 @@
     <description lang="en">Sync favorites.xml</description>
     <description lang="cs">Synchronizace favorites.xml</description>
     <description lang="sk">synchronizácia favorites.xml</description>
-    <source>https://github.com/xbmc-kodi-cz/plugin.video.aktualne.cz</source>
+    <source>https://github.com/vladoem/vladoem.github.io/tree/main/addons/vladoem.favo</source>
     <news>
 [B]Initial version[/B]
 - first version
