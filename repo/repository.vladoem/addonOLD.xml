@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.vladoem"
-  version="1.0.2"
-  name="VladoEm's repository"
-  provider-name="vladom">
-  <extension point="xbmc.addon.repository"
-    name="repozitár vladoem doplnkov">
-    <info compressed="false">https://vladoem.github.io/repository/addons.xml</info>
-    <checksum>https://vladoem.github.io/repository/addons.xml.md5</checksum>
-    <datadir zip="true">https://vladoem.github.io/repository/</datadir>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Repozitár vladoem doplnkov</summary>
-    <description>
-      This is my repository
-    </description>
-    <description lang="sk">
-      Toto je môj repozitár
-    </description>
-    <platform>all</platform>
-    <language>cs sk</language>
-  </extension>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.vladoem" name="VladoEm's repository" version="1.0.9" provider-name="vladoem">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository">
+        <dir>
+            <info compressed="false">https://vladoem.github.io/addons/addons.xml</info>
+            <checksum verify="sha256">https://vladoem.github.io/addons/addons.xml.sha256</checksum>
+            <datadir>https://vladoem.github.io/addons/</datadir>
+            <artdir>https://vladoem.github.io/addons/</artdir>
+            <hashes>sha256</hashes>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Vladov repozitár doplnkov</summary>
+        <description>Vladov repozitár doplnkov</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
 </addon>
