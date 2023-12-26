@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.vladoem" name="VladoEm's repository" version="1.0.6" provider-name="vladoem">
+<addon id="repository.vladoem" name="VladoEm's repository" version="1.0.7" provider-name="vladoem">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository">
         <dir>
             <info compressed="false">https://vladoem.github.io/addons/addons.xml</info>
-            <checksum verify="md5">https://vladoem.github.io/addons/addons.md5</checksum>
+            <checksum verify="sha256">https://vladoem.github.io/addons/addons.sha256</checksum>
             <datadir>https://vladoem.github.io/addons/</datadir>
             <artdir>https://vladoem.github.io/addons/</artdir>
-            <hashes>md5</hashes>
+            <hashes>sha256</hashes>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
