@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.vladoem" name="VladoEm's repository" version="1.0.4" provider-name="vladoem">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository">
+        <dir>
+            <info compressed="false">https://vladoem.github.io/addons/addons.xml</info>C:\github\vladoem.github.io\vladoem.github.io\addons\addons.xml
+            <checksum verify="md5">https://vladoem.github.io/addons/addons.xml.md5</checksum>
+            <datadir>https://vladoem.github.io/addons/</datadir>
+            <artdir>https://vladoem.github.io/addons/</artdir>
+            <hashes>md5</hashes>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Vladov repozitár doplnkov</summary>
+        <description>Repozitár doplnkov vlada</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
