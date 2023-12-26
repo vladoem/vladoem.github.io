@@ -9,7 +9,7 @@
   <dir>
     <info compressed="false">https://vladoem.github.io/addons/addons.xml</info>
     <checksum>https://vladoem.github.io/addons/addons.sha256</checksum>
-    <datadir zip="fasle">https://vladoem.github.io/addons/</datadir>
+    <datadir>https://vladoem.github.io/addons/</datadir>
     <hashes>sha256</hashes>
   </dir>
     </extension>
@@ -77,6 +77,7 @@
     Lets you reorder the entries in your Favourites.
     Use this to organize your Favourites.
         </description>
+        <source>https://github.com/doko-desuka/plugin.program.orderfavourites</source>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
