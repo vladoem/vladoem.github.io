@@ -273,7 +273,7 @@ elif '/just_reload' in PLUGIN_URL:
     try:
         # if saveFavourites(getRawWindowProperty(PROPERTY_FAVOURITES_RESULT)):
         clearWindowProperty(PROPERTY_FAVOURITES_RESULT)
-        xbmcgui.Dialog().ok('Order Favourites', 'Save successful, press OK to reload your profile...')
+        xbmcgui.Dialog().ok('Order Favourites', 'Press OK to reload your profile...')
         xbmc.executebuiltin('LoadProfile(%s)' % xbmc.getInfoLabel('System.ProfileName'))
             # Alternative way of issuing a profile reload, using JSON-RPC:
             #rpcQuery = (

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-  <addon id="plugin.program.vladoem.favo" name="VladoEm's sync favorites" provider-name="Vlado Em" version="1.1.0">
+  <addon id="plugin.program.vladoem.favo" name="VladoEm's sync favorites" provider-name="Vlado Em" version="1.1.1">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -24,6 +24,9 @@
 
 [B]1.1.0:[/B]
 - add Just Reload
+
+[B]1.1.1:[/B]
+- text correction
       </news>
       <platform>all</platform>
     </extension>
