@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+  <addon id="plugin.video.aktualne.cz" name="Aktuálně.cz" version="2.3.5" provider-name="wombat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+        <import addon="script.module.dateutil" version="2.8.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Aktuálně.cz</summary>
+        <summary lang="cs_CZ">Aktuálně.cz</summary>
+        <description lang="en_GB">Aktuálně.cz - kompletní zpravodajství, zprávy z domova i ze světa</description>
+        <description lang="cs_CZ">Aktuálně.cz - kompletní zpravodajství, zprávy z domova i ze světa</description>
+        <source>https://github.com/xbmc-kodi-cz/plugin.video.aktualne.cz</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+        <news>Oprava poslední videa
+        </news>
+    </extension>
+</addon>
 <addon id="plugin.program.vladoem.favo" name="vladoem.favo" provider-name="Vlado Em" version="1.0.0">
   <requires>
     <import addon="xbmc.python" version="2.20.0" />
