@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-  <addon id="plugin.program.vladoem.favo" name="VladoEm's sync favorites" provider-name="Vlado Em" version="1.0.2">
+  <addon id="plugin.program.vladoem.favo" name="VladoEm's sync favorites" provider-name="Vlado Em" version="1.1.0">
     <requires>
       <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -13,8 +13,17 @@
       <description lang="cs">Synchronizace favorites.xml</description>
       <description lang="sk">synchronizácia favorites.xml</description>
       <news>
-  [B]Initial version:[/B]
-  - first version
+[B]Initial version:[/B]
+- first version
+
+[B]1.0.1:[/B]
+- correct name
+
+[B]1.0.2:[/B]
+- Python 3.0.0
+
+[B]1.1.0:[/B]
+- add Just Reload
       </news>
       <platform>all</platform>
     </extension>
