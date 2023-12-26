@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="repository.vladoem"
-  version="1.0.1"
+  version="1.0.2"
   name="VladoEm's repository"
   provider-name="vladom">
   <extension point="xbmc.addon.repository"
@@ -10,7 +10,7 @@
     <datadir zip="true">https://vladoem.github.io/repository/</datadir>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>repozitár vladoem doplnkov</summary>
+    <summary>Repozitár vladoem doplnkov</summary>
     <description>
       This is my repository
     </description>
