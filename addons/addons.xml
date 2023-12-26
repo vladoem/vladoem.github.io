@@ -76,8 +76,8 @@
         <description lang="en">
     Lets you reorder the entries in your Favourites.
     Use this to organize your Favourites.
+    https://github.com/doko-desuka/plugin.program.orderfavourites
         </description>
-        <source>https://github.com/doko-desuka/plugin.program.orderfavourites</source>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>
@@ -109,12 +109,12 @@
         </news>
     </extension>
 </addon>
-<addon id="plugin.program.vladoem.favo" name="vladoem.favo" provider-name="Vlado Em" version="1.0.0">
+<addon id="plugin.program.vladoem.favo" name="VladoEm's sync favorites" provider-name="Vlado Em" version="1.0.0">
   <requires>
-    <import addon="xbmc.python" version="2.20.0" />
+    <import addon="xbmc.python" version="3.0.0"/>
   </requires>
-  <extension library="default.py" point="xbmc.python.pluginsource">
-    <provides>video</provides>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">vladoem.favo</summary>
@@ -123,13 +123,11 @@
     <description lang="en">Sync favorites.xml</description>
     <description lang="cs">Synchronizace favorites.xml</description>
     <description lang="sk">synchronizácia favorites.xml</description>
-    <source>https://github.com/vladoem/vladoem.github.io/tree/main/addons/vladoem.favo</source>
     <news>
-[B]Initial version[/B]
+[B]Initial version:[/B]
 - first version
     </news>
     <platform>all</platform>
   </extension>
 </addon>
-
 </addons>
