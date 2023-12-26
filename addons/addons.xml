@@ -1,25 +1,1715 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <addons>
-<addon id="plugin.program.vladoem.favo" name="vladoem.favo" provider-name="Vlado Em" version="1.0.0">
+  <addon id="plugin.audio.cro" name="ČRo" provider-name="waladir" version="1.2.1">
   <requires>
-    <import addon="xbmc.python" version="2.20.0" />
+    <import addon="xbmc.python" version="3.0.0"/>
   </requires>
-  <extension library="default.py" point="xbmc.python.pluginsource" provides="executable">
-    <provides>executable</provides>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>audio</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">vladoem.favo</summary>
-    <summary lang="cs">vladoem.favo</summary>
-    <summary lang="sk">vladoem.favo</summary>
-    <description lang="en">Sync favorites.xml</description>
-    <description lang="cs">Synchronizace favorites.xml</description>
-    <description lang="sk">synchronizácia favorites.xml</description>
+    <summary lang="en_GB">Český rozhlas</summary>
+    <summary lang="cs_CZ">Český rozhlas</summary>
+    <description lang="en_GB">
+Poslech pořadů archivu stanic Českého rozhlasu
+Poděkování:
+* @JiRo, @meda i ostatním za spoustu užitečných námětů a pomoc s ostraňováním chyb
+
+Další informace a podporu k doplňku najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-cro)
+    </description>
+    <description lang="cs_CZ">
+Poslech pořadů archivu stanic Českého rozhlasu
+Poděkování:
+* @JiRo, @meda i ostatním za spoustu užitečných námětů a pomoc s ostraňováním chyb
+* @delfin-chikago za logo doplňku
+
+Další informace a podporu k doplňku najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-cro)
+    </description>
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.audio.cro</source>
     <news>
-      [B]Initial version[/B]
-      - first version
+v1.2.1 (2021-12-03)
+- do nastavení přidané nastavení preference formátu AAC před MP3
+- přidaná možnost přehrávat AAC streamy
+
+v1.2.0 (2021-12-03)
+- oprava logování v Kodi 19
+- ošetření stanic bez mp3 streamu
+
+v1.1.9 (2021-08-21)
+- ošetření neexistujících pořadů v oblíbených
+
+v1.1.8 (2021-04-10)
+- úprava spouštění přehrávání v Kodi 19
+
+v1.1.7 (2020-11-27)
+- přidání závislosti na verzi pythonu (oddělení větví pro Matrix a Leia a starší)
+
+v1.1.6 (2020-10-11)
+- ošetření chybějícího adresáře pro data doplňku
+
+v1.1.4 (2020-10-10)    
+- komatibilita s Kodi 19 (Matrix)
+- oprava přehrávání některých epizod v tématech
+
+v1.1.2/3 (2020-09-30)
+- přidaná možnost nastavení počtu pořadů nebo epizod na stránku (default 20)
+
+v1.1.1 (2020-09-28)
+- přejmenování loga doplňku
+- zrychlení spuštění přehrávání u živého vysílání
+
+v1.1.0 (2020-09-27)
+- nové logo (díky delfin-chikago) a ikony
+
+v1.0.9 (2020-09-13)
+- oprava přehrávání živého vysílání u stanic bez ikony
+
+v1.0.8 (2020-09-12)
+- opravené přehrávání ve widgetech témat
+- živé vysílání se spouští přes playlist (zůstává otevřený seznam stanic)
+
+v1.0.7 (2020-09-11)
+- přesun položek z oblíbených pořadů do hlavního menu
+- doplnění možnosti přidat pořad rovnou do ostatních oblíbených
+
+v1.0.6 (2020-09-11)
+- oprava odstraňování pořadů z oblíbených
+
+v1.0.5 (2020-09-11)
+- přidány ostatní oblíbené pořady (nesledují se nové epizody), přesouvat lze přes kontextové menu
+- přesun novinek v oblíbených pořadech do Oblíbených pořadů
+- oprava označování nových epizod u stránkování, aktualizace označení po přehrání
+
+v1.0.4 (2020-09-10)
+- úprava jména položky na přidání do oblíbených pořadů v kontextovém menu
+- oprava popisu v záhlaví v nabídce Pořady
+- přidány novinek v oblíbených pořadech
+
+v1.0.3 (2020-09-08)
+- přidány údaje o obsazení pořadů
+- u témat přidané dynamické nabídky pořadů
+- přidané mazání vyhledávaných řetězců
+- úprava titulu v metadatech epizod aby se korektně zobrazoval v seznamu stop, přidání data vysílání
+- přidání oblíbených pořadů
+- oprava vyhledávání
+- přidání stránkování u zobrazení epizod pořadu, u stránkování odstraněná položka předchozí stránka
+
+v1.0.2 (2020-09-07)
+- přidání informace o dílech, pokud jsou k dispozici
+
+v1.0.1 (2020-09-07)    
+- změna vyhledávání z fulltextového na hledání v názvu epizody/pořadu
+- stránkování v pořadech
+- oštření chyby kdy u pořadu chyběla stanice
+
+v1.0.0 (2020-09-06) 
+- první vydání    
     </news>
+    <assets>
+        <icon>logo.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.aktualne.cz" name="Aktuálně.cz" version="2.3.5" provider-name="wombat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+        <import addon="script.module.dateutil" version="2.8.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Aktuálně.cz</summary>
+        <summary lang="cs_CZ">Aktuálně.cz</summary>
+        <description lang="en_GB">Aktuálně.cz - kompletní zpravodajství, zprávy z domova i ze světa</description>
+        <description lang="cs_CZ">Aktuálně.cz - kompletní zpravodajství, zprávy z domova i ze světa</description>
+        <source>https://github.com/xbmc-kodi-cz/plugin.video.aktualne.cz</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+        <news>Oprava poslední videa
+        </news>
+    </extension>
+</addon>
+  <addon id="plugin.video.archivo2tv" name="Sledování O2TV" provider-name="waladir" version="2.6.9">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="iptv_sc_epg.py" point="xbmc.service"/>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="iptv_sc_rec.py">
+          <label>Uložit jako nahrávku na O2TV</label>
+          <visible>
+            Window.IsActive(10702)
+          </visible>
+      </item> 
+      <item library="iptv_sc_dwn.py">
+          <label>Stáhnout</label>
+          <visible>.
+            Window.IsActive(10702)
+          </visible>
+      </item>
+      <item library="iptv_sc.py">
+          <label>Spustit ve Sledování O2TV</label>
+          <visible>
+            Window.IsActive(10702)
+          </visible>
+      </item>
+    </menu>         
+  </extension>  
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Sledování O2TV</summary>
+    <summary lang="cs_CZ">Sledování O2TV</summary>
+    <description lang="en_GB">
+Umožnuje sledování O2TV, včetně základní práce s nahrávkami a IPTV SC
+Poděkování:
+* manželce (aneb cherchez la femme) a Sorosovi za inspiraci
+* djlucasovi za nápad s EPG v IPTV Simple Clientovi a pomoc s realizací
+* všem kdo doplňek používají, pomáhají s odhalováním chyb a zásobují mě náměty
+* listenerovi za poskytnutí kódu
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-zpetne-sledovani-o2tv-ott)
+   </description>
+    <description lang="cs_CZ">
+Umožnuje sledování O2TV, včetně základní práce s nahrávkami a IPTV SC
+Poděkování:
+* manželce (aneb cherchez la femme) a Sorosovi za inspiraci
+* djlucasovi za nápad s EPG v IPTV Simple Clientovi a pomoc s realizací
+* všem kdo doplňek používají, pomáhají s odhalováním chyb a zásobují mě náměty
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-zpetne-sledovani-o2tv-ott)
+    </description>
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.archivo2tv</source>
+    <news>
+v2.6.9 (2023-07-17)
+- možnost zakázat použití playlistu při přehrávání
+      
+v2.6.8 (2023-01-29)
+- oprava generování EPG pro všechny kanály
+
+v2.6.7 (2023-01-22)
+- oprava přehrávání v Kodi Nexus na Androidu u MPEG-DASH-web
+
+v2.6.6 (2023-01-19)
+- oprava přehrávání v Kodi Nexus na Androidu
+
+v2.6.5 (2022-11-24)
+- přesun generového EPG do cloudu
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.idnes.tv" name="iDNES.tv" version="1.1.1" provider-name="wombat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">iDNES.tv</summary>
+        <summary lang="cs_CZ">iDNES.tv</summary>
+        <description lang="en_GB">Výběr nejlepších videí z Česka i ze světa. Reportáže z aktuálních událostí, fotbalové sestřihy, nejlepší góly, zábavná videa, recenze automobilů a přístrojů, profily celebrit nebo rekonstrukce domů a bytů.</description>
+        <description lang="cs_CZ">Výběr nejlepších videí z Česka i ze světa. Reportáže z aktuálních událostí, fotbalové sestřihy, nejlepší góly, zábavná videa, recenze automobilů a přístrojů, profily celebrit nebo rekonstrukce domů a bytů.</description>
+        <source>https://github.com/wombat01/plugin.video.idnes.tv</source>
+    <assets>
+        <icon>resources/icon.png</icon>
+    </assets>
+    <news>Oprava kontextového menu
+    </news>
+    </extension>
+</addon>
+  <addon id="plugin.video.iprima" version="1.4.5" name="Prima+" provider-name="Roman Smolka">
+<requires>
+	<import addon="xbmc.python" version="3.0.0"/>
+	<import addon="script.module.routing" version="0.2.3"/>
+	<import addon="script.module.requests" version="2.22.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+	<provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+	<summary>Prima+</summary>
+	<description>Doplněk pro zobrazování obsahu z archivu Prima+. [CR]Autor nedistribuuje žádný obsah zobrazený tímto doplňkem. Uživatelé se zájmem o přehrávání video obsahu by měli mít aktivní předplatné na iPrima.cz</description>
+	<platform>all</platform>
+	<source>https://github.com/RomanSmolka/plugin.video.iprima.git</source>
+	<assets>
+		<icon>resources/icon.png</icon>
+	</assets>
+	<news>Oprava získání tokenu
+        </news>
+</extension>
+</addon>
+  <addon id="plugin.video.novaplus.cz" name="TV Nova" provider-name="Jiri Vyhnalek, wombat" version="1.5.0">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+        <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">TV Nova</summary>
+        <summary lang="cs_CZ">TV Nova</summary>
+        <description lang="en_GB">Vaše oblíbené seriály, pořady a živé vysílání. TV program, informace o castingech a novinky z televize Nova.</description>
+        <description lang="cs_CZ">Vaše oblíbené seriály, pořady a živé vysílání. TV program, informace o castingech a novinky z televize Nova.</description>
+        <platform>all</platform>
+        <source>https://github.com/xbmc-kodi-cz/plugin.video.novaplus.cz</source>
+        <news>
+        Menu: Přejít na pořad
+        Další vylepšení
+        </news>
+        <assets>
+            <icon>resources/icon-nova.png</icon>
+        </assets>
+    </extension>
+</addon>
+  <addon id="plugin.video.sl" version="1.7.5" name="Skylink Live TV" provider-name="Sorien, cache-sk">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.requests" version="2.18.4"/>
+  <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="main.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.service" library="service.py"/>
+<extension point="xbmc.addon.metadata">
+  <reuselanguageinvoker>true</reuselanguageinvoker>
+  <summary lang="en">Skylink Live TV Addon</summary>
+  <description lang="en">PVR playlist and EPG generator for Skylink Live TV Service</description>
+  <description lang="sk_SK">PVR playlist a EPG generátor pre službu Skylink Live TV</description>
+  <description lang="cs_CZ">Plugin vytváří PVR playlist a EPG pro službu Skylink Live TV</description>
+  <license>MIT</license>
+  <forum>https://www.xbmc-kodi.cz/prispevek-skylink-livetv-addon-beta</forum>
+  <source>https://github.com/Sorien/plugin.video.sl</source>
+  <news>
+[B]1.7.5[/B]
+- oprava generování EPG, když je description (či jiný field) prázdný
+[B]1.7.4[/B]
+- oprava pro Kodi 20 - kvůli xbmc/xbmc#19301
+[B]1.7.3[/B]
+- fix pre novy stream server blokujuci kodi
+[B]1.7.2[/B]
+- zmena v kodi api pre ok dialog
+[B]1.7.1[/B]
+- generovanie epg aj do minulosti pre catchup, default 0
+- blokovanie upravy skinu pre Matrix
+- umoznenie preskakovania prvych troch minut pri pouziti "prehraj odtialto" v klasickom archive, default true
+- kategorie v kniznici
+[B]1.7.0[/B]
+- podpora Kodi 19, vratane catchup, vdaka panda7789
+[B]1.6.7[/B]
+- fix generovania kategorie v EPG
+- fix url na nahlady relacii
+[B]1.6.6[/B]
+- pridanie seriesNo/episodeNo do xmltv
+[B]1.6.5[/B]
+- kolmpatibilita s Kodi Matrix a Python 3.x
+[B]1.6.3[/B]
+- moznost automatickeho nastavenia PVR IPTV Simple Client-a z nastaveni pluinu
+[B]1.6.2[/B]
+- fix chyby pri expirovanom predplatnom
+- optimalizovany archiv (predlzenie o posledne programy)
+[B]1.6.1[/B]
+- alfa verzia kniznice
+[B]1.6.0[/B]
+- zmena api nazad na sl domenu
+- drobne fixy s nahladmi
+- pridanie prototypu kniznice
+[B]1.5.0[/B]
+- pridanie actor/writer/producer/director do xmltv
+[B]1.4.1[/B]
+- upravy pre novu verziu Solocoo API
+[B]1.3.0[/B]
+- pridana funkcionalita na skopirovanie a upravu skinu Estuary a Confluence v nastaveniach
+- pridanie kratkeho epg aj do listu live vo video doplnku
+- presunutie video doplnku, aby sa zobrazoval nie v sluzbach ale vo video doplnkoch
+[B]1.2.4[/B]
+- pridane zanre
+- oprava casu v EPG
+[B]1.2.2[/B]
+- Live TV aj ako sucast video doplnku (pre ludi, ktorym blbne/nejde/nechce cez m3u a iptv simple), treba zapnut cez nastavenia, improvizovane EPG cez "plot"
+- moznost vypnut generovanie M3U - nezastavi service ako taky, len nebude nic generovat
+[B]1.2.1[/B]
+- Tuning loga stanic - moznosti nastavenia pre archiv, moznost pouzit loga zo stranky live, aj pre live playlist
+- Moznost obmedzenia vyberu zariadeni len na prehliadace (aby to neodhlasovalo z telefonu ci TV)
+- Moznost nastavenia aby negenerovalo / nezobrazovalo stanice ktore su pin protected
+- Pytanie PIN kodu na staniciach, ktore su pin protected
+- Fix vyberu zariadeni v archive
+- Fix lokalizacnych unicode chyb pri hlaskach
+- Fix neulozenia nastaveni, ked je service v prevadzke
+
+[B]1.2.0[/B]
+- Pridanie archivu vo video doplnkoch
+
+[B]1.0.1[/B]
+- Pridanie moznosti pouzit najstarsie zariadenie ak ziadne zariadenie nie je dostupne
+
+[B]1.0.0[/B]
+- Opravy
+  </news>
+  <assets>
+    <icon>icon.png</icon>
+    <screenshot>resources\screenshots\1.jpg</screenshot>
+    <screenshot>resources\screenshots\2.jpg</screenshot>
+    <screenshot>resources\screenshots\3.jpg</screenshot>
+  </assets>
+</extension>
+</addon>
+  <addon id="plugin.video.televizeseznam.cz" name="Stream" version="1.2.7" provider-name="wombat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Stream</summary>
+        <summary lang="cs_CZ">Stream</summary>
+        <summary lang="sk_SK">Stream</summary>
+        <description lang="cs_CZ">Videoportál Stream plný stovek originálních pořadů, seriálů a filmů dostupných online i offline.</description>
+        <description lang="en_GB">Videoportál Stream plný stovek originálních pořadů, seriálů a filmů dostupných online i offline.</description>
+        <description lang="sk_SK">Videoportál Stream plný stovek originálních pořadů, seriálů a filmů dostupných online i offline.</description>
+        <source>https://github.com/wombat01/plugin.video.televizeseznam.cz</source>
+        <assets>
+            <icon>resources/icon-white.png</icon>
+        </assets>
+        <news>
+        Oprava zobrazení miniatur
+        </news>
+    </extension>
+</addon>
+  <addon id="plugin.video.xtv.cz" name="XTV.cz" version="1.3.3" provider-name="wombat">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">XTV.cz - Nezávislá internetová televize</summary>
+        <summary lang="cs_CZ">XTV.cz - Nezávislá internetová televize</summary>
+        <description lang="en_GB">XTV je nezávislá internetová televize, která má ambici přinášet svým divákům rozhovory s osobnostmi českého veřejného života – jejich postoje, názory, stanoviska, argumenty i aktuální komentáře přímo do jejich počítačů či mobilních zařízení.</description>
+        <description lang="cs_CZ">XTV je nezávislá internetová televize, která má ambici přinášet svým divákům rozhovory s osobnostmi českého veřejného života – jejich postoje, názory, stanoviska, argumenty i aktuální komentáře přímo do jejich počítačů či mobilních zařízení.</description>
+        <source>https://github.com/wombat01/plugin.video.xtv.cz</source>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+        <news>Oprava přehrávání
+        </news>
+    </extension>
+</addon>
+  <addon id="plugin.video.tipsport.elh" name="Tipsport ELH" provider-name="Jan Kubový" version="0.8.17">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.12.4"/>
+        <import addon="script.module.pil" version="1.1.7" optional="true"/>
+        <import addon="inputstream.adaptive" version="2.4.5"/>
+        <import addon="inputstream.rtmp" version="2.0.9"/>
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Tipsport ELH</summary>
+        <summary lang="cs">Tipsport ELH</summary>
+        <summary lang="sk">Tipsport ELH</summary>
+        <description lang="en">Watch ELH streams from Tipsport site. It is necessary to fill account in setting. If you like this addon and want to thank me, you can donate on paypal.me/JanKubovy or ko-fi.com/JanKubovy</description>
+        <description lang="cs">Sledujte ELH zápasy ze stránky Tipsport. Pro správné fungování je třeba přidat účet v nastavení. V případě, že se vám addon líbí a chcete mi nějak poděkovat, můžete mi poslat libovolnou částku na paypal.me/JanKubovy nebo ko-fi.com/JanKubovy</description>
+        <description lang="sk">Sledujte ELH zápasy zo stránky Tipsport. Pre správne fungovanie je potrebné pridať konto v nastavení. V prípade, že sa vám addon páči a chcete mi nejako poďakovať, môžete mi poslať ľubovoľnú čiastku na paypal.me/JanKubovy alebo ko-fi.com/JanKubovy</description>
+        <disclaimer lang="en">Addon were made for study purposes only and author does not guide anyone to disrespect Tipsport site rules</disclaimer>
+        <disclaimer lang="cs">Addon byl vytvořen pro studijní účely a autor nenabáda nikoho k nerespektování pravidel stránky Tipsport</disclaimer>
+        <disclaimer lang="sk">Addon bol vytvorený pre študijné účely a autor nenabáda nikoho k nerešpektovaniu pravidiel stránky Tipsport</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <screenshot>resources\screenshot-01.jpg</screenshot>
+            <screenshot>resources\screenshot-02.jpg</screenshot>
+            <screenshot>resources\screenshot-03.jpg</screenshot>
+        </assets>
+        <news>
+v0.8.17(05.01.2023)
+  - Fix wrong header name (Login is still not stable)
+v0.8.16(20.03.2022)
+  - Fix going back in folders
+v0.8.15(19.03.2022)
+  - Fix SK login
+  - Add update button
+  - Fix some minor bugs
+v0.8.14(17.03.2022)
+  - Improve saving session to file
+v0.8.13(16.03.2022)
+  - Rewrite login system and use Azure function to get newest requests
+v0.8.12(02.03.2022)
+  - Fix login (Thanks to @WyskyNet)
+v0.8.11(02.02.2022)
+  - Disable folder cache
+v0.8.10(30.01.2022)
+  - Fix Python 3.10 MutableMapping import path
+v0.8.9(28.01.2022)
+  - Fix new login request
+v0.8.8(20.12.2021)
+  - Fix generating icon just for ice hockey
+v0.8.7(26.11.2021)
+  - Use Azure Function to collect crash logs
+v0.8.6(11.09.2021)
+  - Prevent unhandled TypeError on match loading
+v0.8.5(03.09.2021)
+  - Try to fix login (Tipsport start using captcha)
+v0.8.4(06.04.2021)
+  - Add settings to put all streams to folder structure
+v0.8.3(26.01.2021)
+  - Improve stream starting (InputStream Adaptive)
+  - Add Quality settings shortcut
+v0.8.2(25.01.2021)
+  - Fix Playing stream
+v0.8.1(24.01.2021)
+  - Remove Quality selector
+  - Add Handle some unexpected addon errors
+v0.8.0(6.01.2021)
+  - Change support to Kodi v19
+  - Won't work for older Kodi
+        </news>
+    </extension>
+</addon>
+  <addon id="service.audio.cro.live" name="ČRo Live" version="1.6.0" provider-name="listener">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="plugin.py" provides="audio">
+        <provides>audio</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service">
+        <provides>audio</provides>
+    </extension>
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="playarch.py">
+                <label>30301</label>
+                <visible>
+                    Window.IsActive(radioguide)|Window.IsActive(radiosearch)
+                </visible>
+            </item>
+            <item library="downarch.py">
+                <label>30302</label>
+                <visible>
+                    Window.IsActive(radioguide)|Window.IsActive(radiosearch)
+                </visible>
+            </item>
+        </menu>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">ČRo Live - Playlist and EPG</summary>
+        <description lang="en_GB">Service for generating playlists and EPG of ČRo stations</description>
+        <summary lang="cs_CZ">ČRo Live - Playlist a EPG</summary>
+        <description lang="cs_CZ">Služba pro generování playlistu a EPG stanic ČRo</description>
+        <license>MIT License</license>
+        <language>cs_CZ</language>
+        <assets>
+            <icon>CRoLive-icon.png</icon>
+            <fanart>CRoLive-fanart.png</fanart>
+        </assets>
+        <news>
+1.6.1 (2022-10-20)
+  - vylepšení nabídky podcastů (místo dosavadní nabídky všech podcastů je nyní vložena subnabídka s položkami "Všechny", "A - Ž" a "Výběr")
+1.5.1 (2022-07-14)
+  - oprava - doplněk nefungoval na některých platformách (PIL import error)
+1.5.0 (2022-07-07)
+  - Přidána možnost přehrávání podcastů
+  - Přidána možnost přehrávání živého vysílání bez PVR
+1.4.2 (2022-03-16)
+  - Opravena chyba - nefungovalo hledání v archivu, když linkType=='ondemand' a variant=='hls'
+  - Opravena chyba - nefungovalo hledání v archivu, když uživatel měl nastavený 12-hodinový formát
+1.4.1 (2021-12-22)
+  - Opravena chyba - nefungovalo stahování ve Windows (znak ":" v názvu souboru)
+  - Opravena chyba - odstraněna možnost konfliktů ID kanálu (ID je nyní doplněno prefixem "crolive_")
+1.4.0 (2021-12-12)
+  - Možnost výběru preferovaného kodeku (MP3 nebo AAC)
+  - Kvalita (bitrate) se volí z možností Nejvyšší|Střední|Nejnižší
+  - Pro nejvyšší kvalitu je možné povolit stream typu FLAC (je-li k dispozici)
+1.3.2 (2021-12-04)
+  - Opravena chyba - kromě mp3 je nyní akceptován i stream typu aac
+1.3.1 (2021-06-19)
+  - Opravena chyba - nefunguje přehrávání z archivu
+1.3.0 (2021-06-18)
+  - Playlist a EPG mohou být generovány nejen periodicky, ale i na vyžádání (např. doplňkem IPTV Merge)
+1.2.3 (2021-05-21)
+  - Oprava - nová stanice Radiožurnál Sport způsobuje chybu (již je v playlistu, ale není v EPG)
+1.2.2 (2021-05-15)
+  - Přizpůsobení změnám v API Českého rozhlasu
+1.2.1 (2021-03-22)
+  - Opravena chyba - zlepšeno hledání v archivu
+1.2.0 (2021-02-23)
+  - Přidána podpora IPTV Merge
+1.1.0 (2021-01-06)
+  - První repo verze
+1.0.4 (2020-12-14)
+  - Zlepšena úspěšnost hledání v archivu
+1.0.3 (2020-11-04)
+  - Změněno id doplňku podle konvence repozitáře XBMC-Kodi CZ/SK
+  - Optimalizace parsování data
+        </news>
+    </extension>
+</addon>
+  <addon id="service.subtitles.titulky.com" name="Titulky.com" version="2.0.2" provider-name="Beam">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.simplejson" version="3.17.0"/>
+	</requires>
+	<extension point="xbmc.subtitle.module" library="service.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary>Titulky.com</summary>
+		<description lang="en_GB">Search and download subtitles from titulky.com (Czech/Slovak only)</description>
+		<description lang="cs_CZ">Vyhledávání a stahování titulků z titulky.com</description>
+		<description lang="sk_SK">Vyhľadávanie a sťahovanie titulkov z titulky.com</description>
+		<source>https://github.com/beam-kodi-addons-repository/service.subtitles.titulky.com</source>
+		<email>ondra@bimovi.cz</email>
+	</extension>
+</addon>
+  <addon id="plugin.video.dokumenty.tv" version="1.0.4" name="Dokumenty.tv" provider-name="cache-sk">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.resolveurl" version="5.0.00"/>
+        <import addon="script.module.urlresolver" version="5.0.00"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.beautifulsoup4" version="4.5.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Dokumenty.tv</summary>
+        <description lang="en">Simulation dokumenty.tv browser</description>
+        <description lang="sk">Simulácia prehliadača stránky dokumenty.tv</description>
+        <description lang="cs">Simulace prohlížeče stránky dokumenty.tv</description>
+        <disclaimer lang="en">The plugin does not provide any content, it is only a simulation of the browser of a publicly available web site. I am not responsible for the content provided by this site.</disclaimer>
+        <disclaimer lang="sk">Plugin neposkytuje žiaden obsah, je to len simulácia prehliadača verejne dostupnej web stránky. Nie som zodpovedný za obsah, ktorý táto stránka poskytuje.</disclaimer>
+        <disclaimer lang="cz">Plugin neposkytuje žádný obsah, je to jen simulace prohlížeče veřejně dostupné web stránky. Nejsem zodpovědný za obsah, který tato stránka poskytuje.</disclaimer>
+        <news>
+[B]1.0.4[/B]
+- nexus
+[B]1.0.3[/B]
+- matrix
+[B]1.0.2[/B]
+- disclaimer
+[B]1.0.1[/B]
+- removed unused settings
+[B]1.0.0[/B]
+- release
+[B]0.0.4[/B]
+- added to repository
+[B]0.0.3[/B]
+- regex name suffix removal
+[B]0.0.2[/B]
+- beta, plot, better searching
+[B]0.0.1[/B]
+- alpha
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+  <addon id="script.module.stream.resolver" name="Stream Resolver" provider-name="Libor Zoubek" version="1.7.3">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.common.plugin.cache" version="2.5.5"/>
+    <import addon="script.module.demjson" version="2.3.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.3.1"/>
+    <import addon="script.module.html5lib" version="0.999.0"/>
+  </requires>
+  <extension library="lib" point="xbmc.python.module"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs">Kodi CZ/SK plugins common python modules mainly for resolving stream URLs</summary>
+    <description lang="cs">Common python modules pack that is used by kodi cz/sk plugins</description>
+    <license>GNU GPL</license>
     <platform>all</platform>
   </extension>
 </addon>
+  <addon id="script.module.demjson" name="demjson" version="2.3.0" provider-name="Kuci">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.addon.metadata">
+        <summary>Python module for JSON data encoding, including jsonlint.</summary>
+        <description>demjson is a Python language module for encoding, decoding, and syntax-checking JSON data.</description>
+        <platform>all</platform>
+        <license>GNU LGPL 3.0</license>
+        <source>https://github.com/dmeranda/demjson.git</source>
+        <website>https://github.com/dmeranda/demjson</website>
+    </extension>
+</addon>
+  <addon id="plugin.video.iptv.tmobiletvgo" version="2.2.0" name="T-Mobile TV GO" provider-name="Sorien, luk456">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.18.4"/>
+        <import addon="script.module.future" version="0.17.1"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+        <import addon="inputstream.adaptive" version="2.3.22"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.addon.metadata">
+        <reuselanguageinvoker>true</reuselanguageinvoker>
+        <summary lang="en_GB">T-Mobile TV Go Addon</summary>
+        <description lang="en_GB">PVR playlist and EPG generator for Magio Go Service</description>
+        <description lang="cs_CZ">PVR playlist a EPG generátor pro službu T-Mobile TV GO.</description>
+        <license>MIT</license>
+        <forum>https://www.xbmc-kodi.cz/prispevek-magio-go-addon</forum>
+        <source>https://github.com/djlucas123456/plugin.video.iptv.tmobiletvgo</source>
+        <news>
+			v2.1.11 (2021-23.03)
+			- fix: zpetne zhlednuti aktualniho m3u programu
+			v2.1.9 (2021-21.03)
+			- Kodi 19 Matrix, zpetne zhlednuti aktualniho programu, oprava nahravek
+			v2.1.4 (2020-11.09)
+			- opraveno zpetne zhlednuti
+			v2.0.2 (2020-08.31)
+			- přidán request na InputStream Adaptive
+			v2.0.1 (2020-08-28)
+			- přidáno zpětné zhlédnutí z Guide kontext nabidky. Oprava DASH
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <screenshot>resources\screenshots\1.jpg</screenshot>
+            <screenshot>resources\screenshots\2.jpg</screenshot>
+            <screenshot>resources\screenshots\3.jpg</screenshot>
+        </assets>
+    </extension>
+</addon>
+  <addon id="plugin.video.ivysilani.cz" name="iVysílání — Česká televize" version="1.4.1" provider-name="Štěpán Ort">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.stream.resolver" version="1.7.0"/>
+        <import addon="script.module.inputstreamhelper" version="0.5.8"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>iVysílání — Česká televize</summary>
+        <description>Plugin to play videos and live TV from Czech Television's iVysilani</description>
+        <description lang="cs_CZ">Plugin nabízí přístup do archivu České televize iVysílání i přehrávání kanálů živě.
+        </description>
+        <platform>all</platform>
+        <language>cs en sk</language>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <news>Přidána podpora DRM obsahu (@peci1, @brozikcz)
+        </news>
+    </extension>
+</addon>
+  <addon id="plugin.video.rtvs.sk" name="rtvs.sk" provider-name="Jastrab, Maros Ondrasek" version="1.9.8">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>  <!-- xbmc.python 2.1.0 -->
+        <import addon="script.module.stream.resolver" version="1.7.0"/> <!-- script.module.stream.resolver 1.6.13 -->
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">rtvs.sk</summary>
+        <summary lang="cs">rtvs.sk</summary>
+        <summary lang="sk">rtvs.sk</summary>
+        <description lang="en">Watch online TV archive from rtvs.sk</description>
+        <description lang="cs">Sledujte TV archiv zo serveru rtvs.sk</description>
+        <description lang="sk">Sledujte TV archív zo serveru rtvs.sk</description>
+        <platform>all</platform>
+        <source>https://github.com/jastrab/plugin.video.rtvs.sk</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+  <addon id="plugin.video.joj.sk" name="joj.sk" provider-name="Maros Ondrasek" version="1.4.4">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.stream.resolver" version="1.6.24"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">joj.sk</summary>
+    <summary lang="cs">joj.sk</summary>
+    <summary lang="sk">joj.sk</summary>
+    <description lang="en">Watch online TV archive from joj.sk</description>
+    <description lang="cs">Sledujte online TV archiv ze serveru joj.sk</description>
+    <description lang="sk">Sledujte online TV archív zo serveru joj.sk</description>
+    <platform>all</platform>
+    <source>https://github.com/xbmc-kodi-czsk/plugin.video.joj.sk</source>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.markiza.sk" name="markiza.sk" provider-name="rywko" version="1.5.4">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.stream.resolver" version="1.7.2"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">markiza.sk</summary>
+    <summary lang="cs">markiza.sk</summary>
+    <summary lang="sk">markiza.sk</summary>
+    <description lang="en">Watch online Markiza TV online</description>
+    <description lang="cs">Sledujte živý přenos TV Markíza</description>
+    <description lang="sk">Sledujte živé vysielanie TV Markíza</description>
+    <platform>all</platform>
+    <source>https://github.com/kodi-czsk/plugin.video.markiza.sk</source>
+	<assets>
+            <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.ta3.com" name="ta3.com" provider-name="Maros Ondrasek" version="1.2.2">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.stream.resolver" version="1.7.3"/>
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">ta3.com</summary>
+    <summary lang="cs">ta3.com</summary>
+    <summary lang="sk">ta3.com</summary>
+    <description lang="en">Watch online TV archive from ta3.com</description>
+    <description lang="cs">Sledujte online TV archiv zo serveru ta3.com</description>
+    <description lang="sk">Sledujte online TV archív zo serveru ta3.com</description>
+    <platform>all</platform>
+    <source>https://github.com/kodi-czsk/plugin.video.ta3.com</source>
+	<assets>
+            <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.tvba.sk" version="1.0.2" name="TV Bratislava" provider-name="rywko">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.stream.resolver" version="1.7.2"/>
+  </requires>
+	<extension point="xbmc.python.pluginsource" library="main.py">
+		<provides>video</provides>
+	</extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">tvba.sk</summary>
+    <summary lang="cs">tvba.sk</summary>
+    <summary lang="sk">tvba.sk</summary>
+    <description lang="en">Watch online TV archive from tvba.sk</description>
+    <description lang="cs">Sledujte online TV archiv ze serveru tvba.sk</description>
+    <description lang="sk">Sledujte online TV archív zo serveru tvba.sk</description>
+    <platform>all</platform>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon>
+  <addon id="plugin.video.tvnitricka.sk" version="1.0.1" name="NitričkaTV" provider-name="rywko">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+	<extension point="xbmc.python.pluginsource" library="main.py">
+		<provides>video</provides>
+	</extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">tvnitricka.sk</summary>
+    <summary lang="cs">tvnitricka.sk</summary>
+    <summary lang="sk">tvnitricka.sk</summary>
+    <description lang="en">Watch online TV archive from .tvnitricka.sk</description>
+    <description lang="cs">Sledujte online TV archiv ze serveru tvnitricka.sk</description>
+    <description lang="sk">Sledujte online TV archív zo serveru tvnitricka.sk</description>
+    <platform>all</platform>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon>
+  <addon id="plugin.video.cetv.sk" version="1.0.0" name="Central TV" provider-name="rywko">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+	<extension point="xbmc.python.pluginsource" library="main.py">
+		<provides>video</provides>
+	</extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">cetv.sk</summary>
+    <summary lang="cs">cetv.sk</summary>
+    <summary lang="sk">cetv.sk</summary>
+    <description lang="en">Watch online TV archive from cetv.sk</description>
+    <description lang="cs">Sledujte online TV archiv ze serveru cetv.sk</description>
+    <description lang="sk">Sledujte online TV archív zo serveru cetv.sk</description>
+    <platform>all</platform>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+</extension>
+</addon>
+  <addon id="service.subtitles.edna.cz" name="Edna.cz" version="2.0.2" provider-name="Beam">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.simplejson" version="3.17.0"/>
+	</requires>
+	<extension point="xbmc.subtitle.module" library="service.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary>Edna.cz</summary>
+		<description lang="en_GB">Search and download subtitles from edna.cz (Czech/Slovak only)</description>
+		<description lang="cs_CZ">Vyhledavani a stahovani titulku z edna.cz</description>
+		<description lang="sk_SK">Vyhladavanie a stahovanie titulkov z edna.cz</description>
+		<source>https://github.com/beam-kodi-addons-repository/service.subtitles.edna.cz</source>
+		<email>ondra@bimovi.cz</email>
+	</extension>
+</addon>
+  <addon id="plugin.video.sosac.ph" name="Sosáč" provider-name="L. Zoubek + jondas" version="1.4.1">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.stream.resolver" version="1.7.3"/>
+        <import addon="script.common.plugin.cache" version="2.5.0"/>
+    </requires>
+    <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+        <provides>video</provides>
+    </extension>
+    <extension library="service.py" point="xbmc.service" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">sosac.tv</summary>
+        <summary lang="cs">sosac.tv</summary>
+        <description lang="en">Watch online movies and tv shows from www.sosac.tv.</description>
+        <description lang="cs">Sledujte online filmy a serialy z www.sosac.tv.</description>
+        <platform>all</platform>
+        <source>https://github.com/kodi-czsk/plugin.video.sosac.ph</source>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+  <addon id="plugin.audio.poslouchej.radia" name="Poslouchej Rádia" provider-name="ma_sk a mebox" version="3.0.2">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.xbmcswift2" version="19.0.5"/>
+        <import addon="script.module.certifi" version="2019.11.28"/>
+       <import addon="script.module.chardet" version="3.0.4"/>
+       <import addon="script.module.idna" version="2.8.1"/>
+       <import addon="script.module.urllib3" version="1.25.8"/>
+       <import addon="script.module.requests" version="2.9.1"/>
+    </requires>
+    <extension library="addon.py" point="xbmc.python.pluginsource">
+        <provides>audio</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+    <source>https://github.com/Mebox/plugin.audio.poslouchej.radia</source>
+    <forum>https://www.xbmc-kodi.cz/prispevek-poslouchej-radio-doplnek</forum>
+        <license>GPL-2.0-only</license>
+        <summary>Poslouchej rádia podle vlastního výběru</summary>
+        <description lang="en">Addon allows you to listen Slovak , Czech and World radio stations.</description>
+        <description lang="sk">Doplnok umožňuje počúvať Slovenské , České a Zahraničné rozhlasové stanice.</description>
+        <description lang="cs">Doplněk umožňuje poslouchat Slovenské , České a Zahraniční rozhlasové stanice.</description>
+        <disclaimer lang="cz">Autor tohoto addonu nemá žádný obsah, který se v něm nachází a nemá žádnou příslušnost k poskytovateli obsahu. Používejte na vlastní riziko!</disclaimer>
+        <disclaimer lang="sk">Autor tohto addon nemá žiadny obsah, ktorý sa v ňom nachádza a nemá žiadnu príslušnosť k poskytovateľovi obsahu. Používajte na vlastné riziko!</disclaimer>
+        <disclaimer lang="en">The author of this addon has no content in it and no content provider. Use at your own risk!</disclaimer>
+        <news>
+            2.0.1 (5.4.2021)
+            Novinky:
+               - přidaný český překlad
 
+            2.0.0 (24.3.2021)
+            Nová verzia addonu
+            Novinky:
+               - možnosť vytvoriť vlastný zoznam obľúbených staníc
+               - možnosť pridať vlastnú rádiovú stanicu do doplnku
+               - odstránené staré bugy (zvlášte správanie addonu keď sa rádio pridalo do položky 'Obľúbené' a spustilo sa...)
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+    <extension point="kodi.context.item">
+  <menu id="kodi.core.main">
+    <item library="addToFav.py">
+      <label>30026</label>
+      <visible>ListItem.Property(IsSpecial)</visible>
+    </item>
+    <item library="removeFav.py">
+      <label>30027</label>
+      <visible>ListItem.Property(IsPlaylist)</visible>
+    </item>
+  </menu>
+</extension>
+</addon>
+  <addon id="plugin.video.voyo.cz" name="VOYO" provider-name="gtom" version="0.1.1">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0"/>
+        <import addon="script.module.beautifulsoup4" version="4.6.2"/>
+        <import addon="script.module.routing" version="0.2.3"/>
+        <import addon="script.module.inputstreamhelper" version="0.3.3"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">VOYO</summary>
+        <summary lang="cs_CZ">VOYO</summary>
+        <description lang="en_GB">Doplněk pro přehrávání seriálů, filmů a pořadů TV Nova na online televizi VOYO.</description>
+        <description lang="cs_CZ">Doplněk pro přehrávání seriálů, filmů a pořadů TV Nova na online televizi VOYO.</description>
+        <platform>all</platform>
+        <source>https://github.com/xbmc-kodi-cz/plugin.video.voyo.cz</source>
+        <news>První verze pluginu pro Kodi 19</news>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon>
+  <addon id="script.module.resolveurl" name="ResolveURL" version="5.1.59" provider-name="gujal">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+        <import addon="script.module.certifi"/>
+        <import addon="plugin.video.youtube" optional="true"/>
+        <import addon="script.module.python.twitch" optional="true"/>
+        <import addon="plugin.googledrive" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.python.pluginsource" library="lib/default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+  <addon id="script.module.urlresolver" name="URLResolver" version="7.0.00" provider-name="tvaddons">
+    <requires>
+        <!-- <import addon="xbmc.python" version="3.0.0" /> -->
+        <import addon="script.module.six"/>
+        <import addon="script.module.kodi-six"/>
+        <import addon="script.module.certifi"/>
+        <import addon="plugin.video.youtube" optional="true"/>
+        <import addon="script.module.python.twitch" optional="true"/>
+        <import addon="plugin.googledrive" optional="true"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib"/>
+    <extension point="xbmc.python.pluginsource" library="lib/default.py"/>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+        <summary lang="es_ES">Resolver enlaces a videos de sitios populares para poder reproducirlos en XBMC/Kodi.</summary>
+        <summary lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju.</summary>
+        <summary lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi.</summary>
+        <description lang="en_GB">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+        <description lang="el_GR">Επίλυση συνδέσμων κοινών εξυπηρετητών σε μορφή βίντεο ικανό για αναπαραγωγή στο XBMC/Kodi, απλοποίηση της ανάπτυξης των προσθέτων που χρησιμοποιούν πολλαπλούς εξυπηρετητές για υλικό βίντεο</description>
+        <description lang="hr_HR">Prilagodi najčešće URL-ove video izvora kako bi radili u XBMC/Kodiju, pojednostavnjuje razvoj priključaka za video dodatke koji zahtjevaju višestruke video izvore.</description>
+        <disclaimer lang="en_GB">This script only resolves video content from legitimate file lockers without prejudice. If this script is being used by 3rd parties to resolve content that you feel infringes upon your Intellectual Property then please take your complaints to the actual website or developer linking to such content and not here. This script in no way searches for any content whatsoever.</disclaimer>
+        <disclaimer lang="el_GR">Το ανωτέρο σενάριο το μόνο που κάνει είναι να επιλύει οπτικοακουστικό περιεχόμενο από νόμιμες πηγές χωρίς προκατάληψη. Εάν το ανωτέρο σενάριο χρησιμοποιηθεί από τρίτους ώστε να επιλύσει περιεχόμενο το οποίο σας προκαλεί αντίδραση ότι παραβιάζει την πνευματική σας ιδιοκτησία παρακαλώ μεταφέρετε τα παραπονά σας στον ιστότοπο τον οποίο βρίσκεται το εν λόγω περιεχόμενο η τον δημιουργό ο οποίος πραγματοποιεί την σύνδεση και όχι εδω. Το σενάριο αυτό ουδεμία περίπτωση πραγματοποιεί αναζήτηση περιεχομένου.</disclaimer>
+        <forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+    </extension>
+</addon>
+  <addon id="plugin.video.mall.tv" name="Mall.TV" version="1.0.3" provider-name="koudi">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests"/>
+    <import addon="script.module.beautifulsoup4"/>
+    <import addon="script.module.xbmcswift2"/>
+  </requires>
+
+  <extension point="xbmc.python.pluginsource" library="addon.py">
+    <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Mall.TV</summary>
+    <summary lang="cs">Mall.TV</summary>
+    <summary lang="en">Mall.TV</summary>
+    <summary lang="sk">Mall.TV</summary>
+    <description>
+        Plugin to play Mall.TV
+    </description>
+    <description lang="cs">
+        Plugin pro přehrávání Mall.TV
+    </description>
+    <description lang="sk">
+        Plugin na prehrávanie Mall.TV
+    </description>
+    <source>https://github.com/koudi/plugin.video.mall.tv</source>
+	<assets>
+		<icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.mtr.sk" name="Mestská TV Ružomberok" provider-name="Libor Zoubek, jastrab" version="1.1.0">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.stream.resolver" version="1.7.3"/>
+		<!-- <import addon="script.module.elementtree" version="1.2.7" /> -->
+	</requires>
+	<extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">mtr.sk</summary>
+		<summary lang="cs">mtr.sk</summary>
+	 	<summary lang="sk">mtr.sk</summary>
+		<description lang="en">Watch online mtr.sk and video archive</description>
+		<description lang="cs">Sledujte online Mestskú TV Ružomberok a jej videoarchív</description>
+		<description lang="sk">Sledujte online Mestskú TV Ružomberok a jej videoarchív</description>
+		<platform>all</platform>
+		<source>https://github.com/kodi-czsk/plugin.video.mtr.sk</source>
+		<news>- Aktualizácia [B]21.01.2022[/B][CR][CR]- Podpora pre Kodi 19[CR]- Pridaný [COLOR=yellow]videoarchív[/COLOR][CR]- pridané popisy a obrázky[CR]- aktualizovaná ikonka pluginu</news>
+		<assets>
+			<icon>icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+  <addon id="plugin.video.titulkomet.cz" name="titulkomet.cz" provider-name="BrozikCZ / Jastrab" version="0.0.2">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.stream.resolver" version="1.7.3"/>
+    <import addon="script.module.youtube.dl" version="21.417.16"/> 
+    <!-- <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.stream.resolver" version="1.6.55" /> -->
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">titulkomet.cz</summary>
+    <summary lang="cs">titulkomet.cz</summary>
+    <summary lang="sk">titulkomet.cz</summary>
+    <description lang="en">Watch content from titulkomet.cz</description>
+    <description lang="cs">Videa s českými titulky. Vtipná, šokující, virální, smutná, pěkná prostě všelijaká, ale jedno mají společné - budete jim rozumět.</description>
+    <description lang="sk">Videá s českými titulkami. Vtipné, šokujúce, virálne, smutné, pekné, jednoducho všelijaké, ale jedno majú spoločné - budete im rozumieť.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon> 
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.mojevideo.sk" name="mojevideo.sk" provider-name="jose1711" version="0.8">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.stream.resolver" version="1.6.55"/>
+	</requires>
+	<extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">mojevideo.sk</summary>
+		<summary lang="cs_CZ">mojevideo.sk</summary>
+		<summary lang="sk_SK">mojevideo.sk</summary>
+		<description lang="en_GB">Watch content from mojevideo.sk</description>
+		<description lang="cs_CZ">Sleduj videa z mojevideo.sk</description>
+		<description lang="sk_SK">Sleduj videá z mojevideo.sk</description>
+		<platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+		</extension>
+
+	</addon>
+  <addon id="plugin.image.rouming" name="Rouming" version="1.4.1" provider-name="jose1711">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.requests" version="2.22.0"/>
+		<import addon="script.module.beautifulsoup4" version="4.6.0"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>image</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Pics and photos from Rouming.cz</summary>
+		<description lang="en">Check what's new on Rouming.cz</description>
+		<summary lang="sk">Obrázky a fotografie zo serveru Rouming.cz</summary>
+		<description lang="sk">Pozri, čo je nové na Roumenovi!</description>
+		<summary lang="cz">Obrázky a fotografie ze serveru Rouming.cz</summary>
+		<description lang="cz">Mrkni se, co je nového u Roumena!</description>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		<language/>
+		<email>jose1711@gmail.com</email>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+	</extension>
+</addon>
+  <addon id="plugin.video.videacesky.cz" name="videacesky.cz" provider-name="Libor Zoubek" version="1.1.7">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.stream.resolver" version="1.7.3"/>
+    <import addon="script.module.youtube.dl" version="21.417.16"/> <!--https://github.com/nkvoronov/script.module.youtube.dl/tree/vmatrix-->
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="video">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">videacesky.cz</summary>
+    <summary lang="cs">videacesky.cz</summary>
+    <summary lang="sk">videacesky.cz</summary>
+    <description lang="en">Watch content from videacesky.cz</description>
+    <description lang="cs">Sledujte videa, reklamy, seriály, články a návody ze servru videacesky.cz</description>
+    <description lang="sk">Sledujte videá, reklamy, seriály, články a návody zo serveru videacesky.cz</description>
+    <platform>all</platform>
+	<assets>
+	  <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.sportstreams" name="Sport Streams" provider-name="waladir" version="1.0.7">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.6.0"/>    
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">Sport Streams</summary>
+    <description lang="cs_CZ">
+Sportovní přenosy z různých zdrojů:
+
+ČT4 Sport Plus (ČT4 Sport + extra přenosy)
+TVcom.cz (živé přenosy i archiv různých sportů a soutěží)
+Huste.tv (živé přenosy i archiv ze slovenských soutěží)
+Volej.tv (přenosy volejbalových soutěží)
+Ping-pong.tv (přenosy ze soutěží stolního tenisu)
+Ettu.tv (přenosy mezinárodní federace stolního tenisu)
+Niké.sk (živé přenosy i archiv ze slovenských soutěží)
+    </description>    
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.sportstreams</source>
+    <news>
+v1.0.7 (4.3.2023)
+- oprava řazení u ČT4 Sport Plus
+- oprava chyby s nevyplněným url u budoucích streamů
+
+v1.0.6 (14.12.2022)
+- úprava huste.tv
+- přídání nike.sk
+
+v1.0.5 (14.11.2022)
+- oprava chyby po přidání Ettu.tv
+
+v1.0.4 (12.11.2022)
+- přidání Ettu.tv
+
+v1.0.3 (3.8.2022)
+- úprava dat pro huste.tv + formátování datumu
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.hustetv" name="Huste.tv" provider-name="waladir" version="1.0.3">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.22.0"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+    <import addon="script.module.beautifulsoup4" version="4.6.0"/>    
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="scheduler.py" point="xbmc.service"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">Huste.tv</summary>
+    <description lang="cs_CZ">
+Slovenské sportovní přenosy včetně archivu
+    </description>    
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.hustetv</source>
+    <news>
+v1.0.3 (28.3.2022)
+- oprava deploye
+
+v1.0.2 (28.3.2022)
+- úprava addon.xml
+
+v1.0.1 (28.3.2022)
+- přidání živých/budoucích přenosů
+- přidaná možnost automaticky spoustit přenos (je nutné zapnout v nastavení + restartovat Kodi a kontextovém menu u přenosu nastavit naplánovat spuštení)
+
+v1.0.0 (24.3.2022)
+- první verze
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.tvcom.cz" name="TVcom.cz" provider-name="waladir" version="1.0.1">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">TVcom.cz</summary>
+    <description lang="cs_CZ">
+České sportovní přenosy včetně archivu
+    </description>    
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.tvcom.cz</source>
+    <news>
+v1.0.1 (30.3.2022)
+- přidání filtrování přenosů v Dnes
+- kešování dat stahovaných z TVcom.cz
+
+v1.0.0 (29.3.2022)
+- první verze
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.o2tv" name="O2TV" provider-name="waladir" version="1.5.0">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service"/>
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="iptvsc_rec.py">
+          <label>Nahrát v O2TV</label>
+          <visible>
+            Window.IsActive(10702)
+          </visible>
+      </item> 
+    </menu>         
+  </extension>  
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">O2TV</summary>
+    <summary lang="cs_CZ">O2TV</summary>
+    <description lang="en_GB">
+[B]Doplněk pro O2TV 2.0[/B]
+Živé vysílání, archiv, nahrávky, vytváření playlistu a EPG pro IPTV Simple Clienta
+
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-o2tv)
+    </description>
+    <description lang="cs_CZ">
+[B]Doplněk pro O2TV 2.0[/B]
+Živé vysílání, archiv, nahrávky, vytváření playlistu a EPG pro IPTV Simple Clienta
+
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-o2tv)
+    </description>
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.o2tv</source>
+    <news>
+v1.5.0 (25.11.2023)
+- úprava parametrů API
+- přehled zařízení s možností odhlášení
+
+v1.4.9 (26.10.2023)
+- úprava textu chyby při problému s přihlášením
+- logování odeslaných dat při volání API (vyjma přihlašovacích údajů)
+- získávání tokenu jen pro aktivní službu
+
+v1.4.8 (08.09.2023)
+- úprava zobrazení datumů
+
+v1.4.7 (26.08.2023)
+- ošetření chyb v multidimenzi
+      
+v1.4.6 (09.08.2023)
+- oprava nezobrazovaní pořadů v archivu
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.ceskekino.cz" name="České kino" provider-name="waladir" version="1.2.2">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="cs_CZ">České kino</summary>
+    <description lang="cs_CZ">
+Doplněk pro VOD službu ceskekino.cz
+Je potřeba mít zřízený účet a aktivní předplatné!
+
+Děkuji ceskekino.cz za podporu doplňku
+    </description>    
+    <platform>all</platform>
+    <news>
+v1.2.2 (28.8.2023)
+- zrušení stahované keše detailních dat
+- ošetření chybného formátu datumu v detailních datech
+      
+v1.2.1 (2.1.2023)
+- ošetření nedostupných videí
+
+v1.2.0 (23.12.2022)
+- rozdělení do modulů, reuse části kódu
+- úpravy pro Nexus (náhrada deprecated funkcí)
+- stahování a synchronizace keše detailních dat
+
+v1.1.5 (20.12.2022)
+- úprava designu seznamů
+
+v1.1.4 (19.12.2022)
+- ošetření chybějícího ratingu
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="plugin.video.rebittv" name="Rebit.tv" provider-name="waladir" version="1.0.5">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.requests" version="2.18.4"/>
+    <import addon="inputstream.adaptive" version="19.0.0"/>
+  </requires>
+  <extension library="main.py" point="xbmc.python.pluginsource">
+    <provides>video</provides>
+  </extension>
+  <extension library="service.py" point="xbmc.service"/>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Rebit.tv</summary>
+    <summary lang="sk_SK">Rebit.tv</summary>
+    <summary lang="cs_CZ">Rebit.tv</summary>
+    <description lang="en_GB">
+Doplnok pre Rebit.tv
+
+Poďakovanie:
+* cache za vytvorenie a podporu pôvodného doplnku
+* Rebit.tv za podporu a pomoc
+
+Ďalšie informácie a podporu nájdete na fóre www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-rebit-tv--6723)
+    </description>
+    <description lang="sk_SK">
+Doplnok pre Rebit.tv
+
+Poďakovanie:
+* cache za vytvorenie a podporu pôvodného doplnku
+* Rebit.tv za podporu a pomoc
+
+Ďalšie informácie a podporu nájdete na fóre www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-rebit-tv--6723)
+    </description>
+    <description lang="cs_CZ">
+Doplněk pro Rebit.tv
+
+Poděkování:
+* cache za vytvoření a podporu původního doplňku
+* Rebit.tv za podporu a pomoc
+
+Další informace a podporu najdete na fóru www.xbmc-kodi.cz (https://www.xbmc-kodi.cz/prispevek-rebit-tv--6723)
+    </description>
+    <platform>all</platform>
+    <source>https://github.com/waladir/plugin.video.rebittv</source>
+    <news>
+v1.0.5 (11.12.2023)
+- oprava metadat doplňku
+
+v1.0.4 (9.12.2023)
+- ošetření problému s registrací zařízení
+      
+v1.0.3 (22.12.2022)
+- úprava zobrazení pořadů v archivu
+- vynucení vytvoření nové sessiony při smazání zařízení
+
+v1.0.2 (19.12.2022)
+- oprava resetu session
+
+v1.0.1 (19.12.2022)
+- úprava loga a linku na fórum
+    </news>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+  <addon id="script.contextmenu" version="0.1.15" name="Context Menu" provider-name="JiRo">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+    </requires>
+	<extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+	<extension point="kodi.context.item"> 
+		<menu id="kodi.core.main">
+			<item library="command.py" args="@item1_command,6">
+				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),6)</visible>
+			</item>
+			<item library="command.py" args="@item2_command,6">
+				<label>$INFO[Window(Home).Property(contextmenu_item2_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item2_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item2_position),6)</visible>
+			</item>
+			<item library="command.py" args="@item3_command,6">
+				<label>$INFO[Window(Home).Property(contextmenu_item3_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item3_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item3_position),6)</visible>
+			</item>
+			<item library="command.py" args="@item4_command,6">
+				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),6)</visible>
+			</item>
+			<item library="resourcestool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream,true">
+				<label>30101</label>
+				<visible>!Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream)</visible>
+			</item>
+			<item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream,false">
+				<label>30102</label>
+				<visible>Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream)</visible>
+			</item>
+			<item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream.download,true">
+				<label>30111</label>
+				<visible>!Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream.download) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream.download)</visible>
+			</item>
+			<item library="tool.py" args="plugin.video.stream-cinema-2-release,auto_select_stream.download,false">
+				<label>30112</label>
+				<visible>Addon.SettingBool(plugin.video.stream-cinema-2-release,auto_select_stream.download) + System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + [String.IsEqual(Container.PluginName,plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_select_stream.download)</visible>
+			</item>
+			<item library="command.py" args="@item1_command,5">
+				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),5)</visible>
+			</item>
+			<item library="command.py" args="@item2_command,5">
+				<label>$INFO[Window(Home).Property(contextmenu_item2_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item2_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item2_position),5)</visible>
+			</item>
+			<item library="command.py" args="@item3_command,5">
+				<label>$INFO[Window(Home).Property(contextmenu_item3_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item3_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item3_position),5)</visible>
+			</item>
+			<item library="command.py" args="@item4_command,5">
+				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),5)</visible>
+			</item>
+			<item library="command.py" args="Addon.OpenSettings(script.backgroundmusic)">
+				<label>30010</label>
+				<visible>Window.IsActive(10002) + Addon.SettingBool(script.contextmenu,enable_background_music)</visible>
+			</item>
+			<item library="trailer.py">
+				<label>30020</label>
+				<visible>!String.IsEmpty(ListItem.Trailer) + !String.Contains(ListItem.Trailer,plugin://plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_play_trailer)</visible>
+			</item>
+			<item library="searchtrailer.py">
+				<label>30030</label>
+				<visible>System.AddonIsEnabled(plugin.video.youtube) + Addon.SettingBool(script.contextmenu,enable_search_trailer)</visible>
+			</item>
+			<item library="command.py" args="@item1_command,4">
+				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),4)</visible>
+			</item>
+			<item library="command.py" args="@item2_command,4">
+				<label>$INFO[Window(Home).Property(contextmenu_item2_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item2_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item2_position),4)</visible>
+			</item>
+			<item library="command.py" args="@item3_command,4">
+				<label>$INFO[Window(Home).Property(contextmenu_item3_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item3_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item3_position),4)</visible>
+			</item>
+			<item library="command.py" args="@item4_command,4">
+				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),4)</visible>
+			</item>
+			<item library="search.py">
+				<label>30051</label>
+				<visible>Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="search.py" args="scc">
+				<label>30058</label>
+				<visible>System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_search_scc) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="search.py" args="ws">
+				<label>30060</label>
+				<visible>System.AddonIsEnabled(plugin.video.stream-cinema-2-release) + Addon.SettingBool(script.contextmenu,enable_search_ws) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="search.py" args="sc">
+				<label>30062</label>
+				<visible>System.AddonIsEnabled(plugin.video.stream-cinema) + Addon.SettingBool(script.contextmenu,enable_search_sc) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="search.py" args="netflix">
+				<label>30071</label>
+				<visible>System.AddonIsEnabled(plugin.video.netflix) + Addon.SettingBool(script.contextmenu,enable_search_netflix) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="search.py" args="yt">
+				<label>30067</label>
+				<visible>System.AddonIsEnabled(plugin.video.youtube) + Addon.SettingBool(script.contextmenu,enable_search_yt) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="search.py" args="library">
+				<label>30069</label>
+				<visible>false + System.AddonIsEnabled(script.globalsearch) + Addon.SettingBool(script.contextmenu,enable_search_library) + !Addon.SettingBool(script.contextmenu,common_item_search) + Addon.SettingBool(script.contextmenu,enable_search)</visible>
+			</item>
+			<item library="command.py" args="@item1_command,3">
+				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),3)</visible>
+			</item>
+			<item library="command.py" args="@item2_command,3">
+				<label>$INFO[Window(Home).Property(contextmenu_item2_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item2_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item2_position),3)</visible>
+			</item>
+			<item library="command.py" args="@item3_command,3">
+				<label>$INFO[Window(Home).Property(contextmenu_item3_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item3_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item3_position),3)</visible>
+			</item>
+			<item library="command.py" args="@item4_command,3">
+				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),3)</visible>
+			</item>
+			<item library="command.py" args="Container.Refresh()">
+				<label>30090</label>
+				<visible>!String.IsEmpty(Container.FolderPath) + Addon.SettingBool(script.contextmenu,enable_content_refresh)</visible>
+			</item>
+			<item library="command.py" args="Action(Delete)">
+				<label>30095</label>
+				<visible>Addon.SettingBool(script.contextmenu,enable_delete)</visible>
+			</item>
+			<item library="command.py" args="@item1_command,2">
+				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),2)</visible>
+			</item>
+			<item library="command.py" args="@item2_command,2">
+				<label>$INFO[Window(Home).Property(contextmenu_item2_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item2_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item2_position),2)</visible>
+			</item>
+			<item library="command.py" args="@item3_command,2">
+				<label>$INFO[Window(Home).Property(contextmenu_item3_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item3_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item3_position),2)</visible>
+			</item>
+			<item library="command.py" args="@item4_command,2">
+				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),2)</visible>
+			</item>
+			<item library="setting.py">
+				<label>30091</label>
+				<visible>!String.IsEmpty(Container.PluginName) + Addon.SettingBool(script.contextmenu,enable_addon_setting)</visible>
+			</item>
+			<item library="settingwidget.py">
+				<label>30091</label>
+				<visible>String.IsEmpty(Container.PluginName) + !String.IsEmpty(ListItem.Path) + !String.IsEqual(ListItem.Path,plugin://) + !String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) + String.StartsWith(ListItem.Path,plugin://) + Addon.SettingBool(script.contextmenu,enable_addon_setting)</visible>
+			</item>
+			<item library="settingscc.py">
+				<label>30091</label>
+				<visible>String.IsEmpty(Container.PluginName) + [String.StartsWith(ListItem.Path,plugin://plugin.video.stream-cinema-2-release) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,movie_library_folder)) | String.StartsWith(ListItem.Path,Addon.SettingStr(plugin.video.stream-cinema-2-release,tvshow_library_folder))] + Addon.SettingBool(script.contextmenu,enable_addon_setting)</visible>
+			</item>
+			<item library="command.py" args="ActivateWindow(settings)">
+				<label>30094</label>
+				<visible>Addon.SettingBool(script.contextmenu,enable_setting)</visible>
+			</item>
+			<item library="command.py" args="Addon.OpenSettings(script.contextmenu)">
+				<label>30092</label>
+				<visible>Addon.SettingBool(script.contextmenu,enable_self_setting)</visible>
+			</item>
+			<item library="iteminfo.py">
+				<label>30040</label>
+				<visible>!String.IsEmpty(Container.Content) + Addon.SettingBool(script.contextmenu,enable_iteminfo)</visible>
+			</item>
+			<item library=".dump.py">
+				<label>Item Dump</label>
+				<visible>Skin.HasSetting(easy_master)</visible>
+			</item>
+			<item library="command.py" args="@item1_command,1">
+				<label>$INFO[Window(Home).Property(contextmenu_item1_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item1_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item1_position),1)</visible>
+			</item>
+			<item library="command.py" args="@item2_command,1">
+				<label>$INFO[Window(Home).Property(contextmenu_item2_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item2_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item2_position),1)</visible>
+			</item>
+			<item library="command.py" args="@item3_command,1">
+				<label>$INFO[Window(Home).Property(contextmenu_item3_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item3_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item3_position),1)</visible>
+			</item>
+			<item library="command.py" args="@item4_command,1">
+				<label>$INFO[Window(Home).Property(contextmenu_item4_name)]</label>
+				<visible>Addon.SettingBool(script.contextmenu,item4_enable) + Integer.IsEqual(Addon.SettingInt(script.contextmenu,item4_position),1)</visible>
+			</item>
+		</menu> 
+	</extension>
+	<extension point="xbmc.addon.metadata">
+        <summary lang="cs_cz">Context Menu - Easy Tools kategorie</summary>
+        <description lang="cs_cz">Přidává různé a užitečné položky do kontextového menu. Umožňuje také uživatelům si s jeho pomocí definovat vlastní položky tohoto menu.[CR][CR]Další informace najdete na www.xbmc-kodi.cz/prispevek-context-menu.</description>
+        <disclaimer lang="cs_cz">Experimentální verze...</disclaimer>
+        <summary lang="en_gb">Context Menu - Easy Tools category</summary>
+        <description lang="en_gb">Adds various and useful items to the context menu. Addon also offers users to define their own menu items.[CR][CR]You can find more information at www.xbmc-kodi.cz/prispevek-context-menu (czech only).</description>
+        <disclaimer lang="en_gb">Experimental version...</disclaimer>
+        <summary lang="sk_sk">Context Menu - Easy Tools kategórie</summary>
+        <description lang="sk_sk">Pridáva rôzne a užitočné položky do kontextového menu. Umožňuje taktiež užívateľom si s jeho pomocou definovať vlastné položky tohto menu.[CR][CR]Ďalšie informácie nájdete na www.xbmc-kodi.cz/prispevek-context-menu.</description>
+        <disclaimer lang="sk_sk">Experimentálna verzia...</disclaimer>
+        <language>cs_cz</language>
+		<platform>all</platform>
+        <license>GPL 2.0</license>
+		<forum>https://www.xbmc-kodi.cz/prispevek-context-menu</forum>
+		<website/>
+		<email/>
+		<source/>
+		<news>v0.1.15 (2023-11-13)
+- added search in Netflix
+- added other settings for search functions
+		</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+            <screenshot>resources/screenshot01.jpg</screenshot>
+            <screenshot>resources/screenshot02.jpg</screenshot>
+            <screenshot>resources/screenshot03.jpg</screenshot>
+            <screenshot>resources/screenshot04.jpg</screenshot>
+            <screenshot>resources/screenshot05.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
 </addons>

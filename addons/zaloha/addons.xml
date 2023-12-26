@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.program.vladoem.favo" name="vladoem.favo" provider-name="Vlado Em" version="1.0.0">
+  <requires>
+    <import addon="xbmc.python" version="2.20.0" />
+  </requires>
+  <extension library="default.py" point="xbmc.python.pluginsource" provides="executable">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">vladoem.favo</summary>
+    <summary lang="cs">vladoem.favo</summary>
+    <summary lang="sk">vladoem.favo</summary>
+    <description lang="en">Sync favorites.xml</description>
+    <description lang="cs">Synchronizace favorites.xml</description>
+    <description lang="sk">synchronizácia favorites.xml</description>
+    <news>
+      [B]Initial version[/B]
+      - first version
+    </news>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+</addons>
