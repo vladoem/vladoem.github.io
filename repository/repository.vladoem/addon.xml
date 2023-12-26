@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="repository.vladoem"
-  version="1.0.0"
-  name="Kodi vladoem Doplnky"
-  provider-name="Kodi vladom">
+  version="1.0.1"
+  name="VladoEm's repository"
+  provider-name="vladom">
   <extension point="xbmc.addon.repository"
     name="repozitár vladoem doplnkov">
-    <info compressed="false">https://vladoem.github.io/repository/repo/addons.xml</info>
-    <checksum>https://vladoem.github.io/repository/repo/addons.xml.md5</checksum>
-    <datadir zip="true">https://vladoem.github.io/repository/repo/</datadir>
+    <info compressed="false">https://vladoem.github.io/repository/addons.xml</info>
+    <checksum>https://vladoem.github.io/repository/addons.xml.md5</checksum>
+    <datadir zip="true">https://vladoem.github.io/repository/</datadir>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary>repozitár vladoem doplnkov</summary>
