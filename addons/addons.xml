@@ -8,7 +8,7 @@
   name="VladoEm repo">
   <dir>
     <info compressed="false">https://vladoem.github.io/addons/addons.xml</info>
-    <checksum>https://vladoem.github.io/addons/addons.sha256</checksum>
+    <checksum>https://vladoem.github.io/addons/addons.xml.sha256</checksum>
     <datadir>https://vladoem.github.io/addons/</datadir>
     <hashes>sha256</hashes>
   </dir>
