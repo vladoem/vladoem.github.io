@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
   <addon id="repository.vladoem"
-  version="1.0.8"
+  version="1.0.9"
   name="VladoEm's repository"
   provider-name="vladoem">
   <extension point="xbmc.addon.repository"
