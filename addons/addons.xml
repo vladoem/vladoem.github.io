@@ -22,7 +22,7 @@
     </extension>
   </addon>
   <addon id="repository.vladoem"
-  version="1.0.9"
+  version="1.0.10"
   name="VladoEm's repository"
   provider-name="vladoem">
   <extension point="xbmc.addon.repository"
