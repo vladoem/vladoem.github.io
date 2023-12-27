@@ -1,4 +1,6 @@
 # Ignorovanie logov
 log/
 
+
+# Test ignorovania
 repo/
