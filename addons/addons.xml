@@ -13,20 +13,26 @@
       <description lang="cs">Synchronizace favorites.xml</description>
       <description lang="sk">synchronizácia favorites.xml</description>
       <news>
-[B]Initial version:[/B]
-- first version
+[B]1.1.2:[/B]
++ remake description of addon
 
-[B]1.0.1:[/B]
-- correct name
+[B]1.1.1:[/B]
++ text correction
+
+[B]1.1.0:[/B]
+* add Just Reload
 
 [B]1.0.2:[/B]
 - Python 3.0.0
 
-[B]1.1.0:[/B]
-- add Just Reload
+[B]1.0.1:[/B]
++ correct name
 
-[B]1.1.1:[/B]
-- text correction
+[B]Initial version:[/B]
+  first version
+
+
+
       </news>
       <platform>all</platform>
     </extension>

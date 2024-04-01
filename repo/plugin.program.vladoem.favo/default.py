@@ -341,7 +341,7 @@ else:
             (PLUGIN_URL + 'just_reload', justReloadItem, False),
             (PLUGIN_URL + 'save_reload', saveReloadItem, False),
             (PLUGIN_URL + 'save_exit', saveExitItem, False),
-            (PLUGIN_URL + 'exit_only', exitItem, False)
+            (PLUGIN_URL + 'EXIT', exitItem, False)
         )
     )
     xbmcplugin.endOfDirectory(PLUGIN_ID)
